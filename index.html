@@ -40,21 +40,21 @@
             }
 
             function createWolfram(rows,columns){
-                output = "{"                
+                output = "["                
 
                 for (let i = 1; i <= rows; i++) {
 
-                    values = "{"
+                    values = "["
                     for (j = 1; j <= columns; j++) {
                         id = i.toString().concat(j.toString())
                         values = values.concat(getValue(id),",")
                         console.log(getValue(id))
                     }  
-                    output = output.concat(values.slice(0,-1).concat('},'))
+                    output = output.concat(values.slice(0,-1).concat('],'))
                     
                 }
 
-                output = output.slice(0,-1).concat('}')
+                output = output.slice(0,-1).concat(']')
                 $('#outwolf').val(output)
             }
 
